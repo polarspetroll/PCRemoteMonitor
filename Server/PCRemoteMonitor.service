@@ -1,0 +1,10 @@
+[Unit]
+Description=Remote monitoring service
+After=network.target
+Type=simple
+Restart=always
+
+[Service]
+Restart=on-failure
+ExecStart=/usr/bin/PCRemoteMonitor/PCRemoteMonitorService
+WorkingDirectory=/usr/bin/PCRemoteMonitor
